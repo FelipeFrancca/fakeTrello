@@ -53,7 +53,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar className="appBar" style={{ backgroundColor: "#1D2125" }}>
+    <AppBar className="appBar" style={{ backgroundColor: '#1D2125', borderBottom: 'solid #ffffff 1px', }}>
       <Box style={{ padding: "0 1rem 0 1rem" }}>
         <Toolbar disableGutters>
           <AppsOutageIcon />
@@ -90,7 +90,7 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={handleCloseNavMenu} style={{textTransform: "capitalize !important",}}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -130,10 +130,7 @@ function ResponsiveAppBar() {
           <Box sx={{ display: "flex !important", alignItems: 'center',  gap: 1 }}>
             <NotificationsIcon />
             <HelpOutlineIcon />
-            <Tooltip
-              title="Account"
-              sx={{ display: "flex !important", gap: 8 }}
-            >
+            <Tooltip title="Account">
               <IconButton onClick={handleOpenUserMenu}>
                 <Avatar
                   alt="Felipe"

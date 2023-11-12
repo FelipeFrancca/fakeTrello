@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background: rgb(48, 48, 48);
+  background: #1D2125;
   height: 100vh;
   flex-wrap: wrap;
   overflow: hidden;
