@@ -8,6 +8,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import "../../assets/styles/Dashboard.css";
+import MenuComponent from '../dashboard/components/menuComponent'
 
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -68,7 +69,7 @@ function ResponsiveAppBar() {
               <Box className="imageLogo"></Box>
             </Box>
             <Box>
-
+              <MenuComponent></MenuComponent>
             </Box>
           
             <Box
