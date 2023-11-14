@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   color: #fff;
+  padding-top: 20px;
 }
 .textHeader{
   display: flex;

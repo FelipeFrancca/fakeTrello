@@ -18,6 +18,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import AppsOutageIcon from "@mui/icons-material/AppsOutage";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import { Outlet } from "react-router-dom";
 
 const pages = ["Worlspaces", "Recent", "Starred", "Templates"];
 const account = [
@@ -53,6 +54,7 @@ function ResponsiveAppBar() {
   };
 
   return (
+    <Box>
     <AppBar className="appBar" style={{ backgroundColor: '#1D2125', borderBottom: 'solid #ffffff 1px', }}>
       <Box style={{ padding: "0 1rem 0 1rem" }}>
         <Toolbar disableGutters>
@@ -96,25 +98,6 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
@@ -165,6 +148,8 @@ function ResponsiveAppBar() {
         </Toolbar>
       </Box>
     </AppBar>
+    <Outlet />
+    </Box>
   );
 }
 export default ResponsiveAppBar;
