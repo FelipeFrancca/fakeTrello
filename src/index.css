@@ -21,6 +21,6 @@ body {
   background: #1D2125;
   height: 100vh;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 

@@ -19,6 +19,7 @@ import AppsOutageIcon from "@mui/icons-material/AppsOutage";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { Outlet } from "react-router-dom";
+import Zoom from '@mui/material/Zoom';
 
 const optionsMenu = ["Worlspaces", "Recent", "Starred", "Templates"];
 const account = [
@@ -64,7 +65,11 @@ function ResponsiveAppBar() {
       >
         <Box style={{ padding: "0 1rem 0 1rem" }}>
           <Toolbar disableGutters>
-            <AppsOutageIcon />
+          <Tooltip title="About us" placement="bottom-start" TransitionComponent={Zoom}>
+              <IconButton>
+              <AppsOutageIcon sx={{color: '#fff'}} />
+              </IconButton>
+              </Tooltip>
             <Box className="imageLogoContainer">
               <Box className="imageLogo"></Box>
             </Box>
@@ -75,9 +80,17 @@ function ResponsiveAppBar() {
             <Box
               sx={{ display: "flex !important", alignItems: "center", gap: 1 }}
             >
-              <NotificationsIcon />
-              <HelpOutlineIcon />
-              <Tooltip title="Account">
+              <Tooltip title="Notifications" TransitionComponent={Zoom}>
+              <IconButton>
+              <NotificationsIcon sx={{color: '#fff'}} />
+              </IconButton>
+              </Tooltip>
+              <Tooltip title="Help">
+              <IconButton>
+              <HelpOutlineIcon sx={{color: '#fff'}} />
+              </IconButton>
+              </Tooltip>
+              <Tooltip title="Account" TransitionComponent={Zoom}>
                 <IconButton onClick={handleOpenUserMenu}>
                   <Avatar
                     alt="Felipe"
