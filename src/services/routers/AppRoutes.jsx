@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import List from "../../pages/dashboard/views/components/List.jsx";
-import NotFound from "../../pages/dashboard/views/NotFound";
+import NotFound from "../../pages/dashboard/views/components/NotFound.jsx";
 import Dashboard from "../../pages/dashboard/Dashboard.jsx";
 
 function AppRoutes() {

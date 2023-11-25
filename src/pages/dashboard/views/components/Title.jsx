@@ -9,12 +9,14 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
     },
     editableTitle: {
-    color: '#fff',
-    backgroundColor: '#383838',
     flexGrow: 1,
+    fontSize: "1.2rem",
+    fontWeight: "bold",
   },
   input: {
     margin: theme.spacing(1),
+    fontSize: "1.2rem",
+    fontWeight: "bold",
     '&:focus': {
       backgroundColor: '#ddd',
     }
@@ -28,7 +30,8 @@ export default function Title() {
     <Box>
         {open ? (
         <Box>
-        <InputBase value="Todo"
+        <InputBase value="To-Do"
+        autoFocus
         inputProps={{
           className: classes.input,
         }}
@@ -41,7 +44,7 @@ export default function Title() {
         <Typography
         onClick={() => setOpen(!open)}
         className={classes.editableTitle}
-        >todo
+        >To-Do
         </Typography>
         <MoreHorizIcon />
         </Box>

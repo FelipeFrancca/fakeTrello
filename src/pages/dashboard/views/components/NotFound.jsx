@@ -2,8 +2,8 @@ import { Button, Box } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import bannerNotF from "../../../assets/images/logo/trelloMov.gif";
-import "../../../assets/styles/NotFound.css";
+import bannerNotF from "../../../../assets/images/logo/trelloMov.gif";
+import "../../../../assets/styles/NotFound.css";
 
 
 const NotFound = (props) => {
