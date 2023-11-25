@@ -5,13 +5,11 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 
 import "../../assets/styles/Dashboard.css";
 import MenuComponent from '../dashboard/components/menuComponent'
 
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
@@ -21,7 +19,6 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { Outlet } from "react-router-dom";
 import Zoom from '@mui/material/Zoom';
 
-const optionsMenu = ["Worlspaces", "Recent", "Starred", "Templates"];
 const account = [
   "Switch accounts",
   "Manage accounts",
@@ -36,18 +33,10 @@ const account = [
 ];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
@@ -58,7 +47,7 @@ function ResponsiveAppBar() {
     <Box>
       <AppBar
         className="appBar"
-        style={{
+        sx={{
           backgroundColor: "#1D2125",
           borderBottom: "solid #ffffff 1px",
         }}
