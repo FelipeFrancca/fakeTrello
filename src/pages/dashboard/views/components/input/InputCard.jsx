@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 
-export default function InputCard() {
+export default function InputCard({ setOpen }) {
   const classes = useStyles();
   return (
     <Box>
@@ -33,6 +33,7 @@ export default function InputCard() {
         <Paper className={classes.card}>
           <InputBase
           multiline
+          onBlur={() => setOpen(false)}
           fullWidth
           inputProps={{
             className: classes.input,
@@ -41,8 +42,10 @@ export default function InputCard() {
         </Paper>
       </Box>
       <Box className={classes.confirm}>
-        <Button className={classes.btnConfirm}>Add Card</Button>
-        <IconButton>
+        <Button className={classes.btnConfirm} onClick={() => setOpen(false)}>
+          Add Card
+        </Button>
+        <IconButton onClick={() => setOpen(false)}>
           <ClearIcon />
         </IconButton>
       </Box>
