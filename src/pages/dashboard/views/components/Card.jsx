@@ -9,12 +9,12 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default function Card() {
+export default function Card({ card }) {
   const classes = useStyles();
   return (
     <Box>
         <Paper className={classes.card}>
-            test card component
+            {card.content}
         </Paper>
     </Box>
   )

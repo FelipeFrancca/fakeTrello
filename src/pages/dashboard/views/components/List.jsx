@@ -13,18 +13,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Home() {
+export default function List({ list }) {
   const classes = useStyles();
   return (
     <Box>
       <Paper className={classes.root}>
         <CssBaseline />
-        <Title />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Title title={list.title} />
+        {list.cards.map((card) => (
+          <Card key={card.id} card={card} />
+        ))}
         <ImputContainer />
       </Paper>
     </Box>
