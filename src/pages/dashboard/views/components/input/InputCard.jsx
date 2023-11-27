@@ -51,7 +51,7 @@ export default function InputCard({ setOpen, listId }) {
           <InputBase
           onChange={handleOnChange}
           multiline
-          onBlur={handleBlur}
+          onBlur={handlebtnConfirm}
           fullWidth
           inputProps={{
             className: classes.input,
@@ -64,7 +64,7 @@ export default function InputCard({ setOpen, listId }) {
         <Button className={classes.btnConfirm} onClick={handlebtnConfirm}>
           Add Card
         </Button>
-        <IconButton onClick={() => setOpen(false)}>
+        <IconButton onClick={handleBlur}>
           <ClearIcon />
         </IconButton>
       </Box>

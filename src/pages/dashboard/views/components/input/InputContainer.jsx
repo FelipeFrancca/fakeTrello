@@ -6,7 +6,7 @@ import { Collapse } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(2)
+    marginTop: theme.spacing(2),
   },
   addCard: {
     padding: theme.spacing(1, 1, 1, 2),

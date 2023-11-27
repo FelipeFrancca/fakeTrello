@@ -52,66 +52,68 @@ function ResponsiveAppBar() {
           borderBottom: "solid #ffffff 1px",
         }}
       >
-        <Box style={{ padding: "0 1rem 0 1rem" }}>
-          <Toolbar disableGutters>
-          <Tooltip title="About us" placement="bottom-start" TransitionComponent={Zoom}>
-              <IconButton>
-              <AppsOutageIcon sx={{color: '#fff'}} />
-              </IconButton>
-              </Tooltip>
-            <Box className="imageLogoContainer">
-              <Box className="imageLogo"></Box>
-            </Box>
-            <Box>
-              <MenuComponent></MenuComponent>
-            </Box>
-          
-            <Box
-              sx={{ display: "flex !important", alignItems: "center", gap: 1 }}
-            >
-              <Tooltip title="Notifications" TransitionComponent={Zoom}>
-              <IconButton>
-              <NotificationsIcon sx={{color: '#fff'}} />
-              </IconButton>
-              </Tooltip>
-              <Tooltip title="Help">
-              <IconButton>
-              <HelpOutlineIcon sx={{color: '#fff'}} />
-              </IconButton>
-              </Tooltip>
-              <Tooltip title="Account" TransitionComponent={Zoom}>
-                <IconButton onClick={handleOpenUserMenu}>
-                  <Avatar
-                    alt="Felipe"
-                    src="/static/images/avatar/2.jpg"
-                    style={{ width: 24, height: 24, fontSize: 14 }}
-                  />
+        <Box sx={{ display: "flex", justifyContent: "space-between"}}>
+          <Box style={{ padding: "0 1rem 0 1rem" }}>
+            <Toolbar disableGutters>
+            <Tooltip title="About us" placement="bottom-start" TransitionComponent={Zoom}>
+                <IconButton>
+                <AppsOutageIcon sx={{color: '#fff'}} />
                 </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
+                </Tooltip>
+              <Box className="imageLogoContainer">
+                <Box className="imageLogo"></Box>
+              </Box>
+              <Box>
+                <MenuComponent></MenuComponent>
+              </Box>
+            
+              <Box
+                sx={{ display: "flex", alignItems: "center", gap: 1, }}
               >
-                {account.map((account) => (
-                  <MenuItem key={account} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{account}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-          </Toolbar>
+                <Tooltip title="Notifications" TransitionComponent={Zoom}>
+                <IconButton>
+                <NotificationsIcon sx={{color: '#fff'}} />
+                </IconButton>
+                </Tooltip>
+                <Tooltip title="Help">
+                <IconButton>
+                <HelpOutlineIcon sx={{color: '#fff'}} />
+                </IconButton>
+                </Tooltip>
+                <Tooltip title="Account" TransitionComponent={Zoom}>
+                  <IconButton onClick={handleOpenUserMenu}>
+                    <Avatar
+                      alt="Felipe"
+                      src="/static/images/avatar/2.jpg"
+                      style={{ width: 24, height: 24, fontSize: 14 }}
+                    />
+                  </IconButton>
+                </Tooltip>
+                <Menu
+                  sx={{ mt: "45px" }}
+                  id="menu-appbar"
+                  anchorEl={anchorElUser}
+                  anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "right",
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "right",
+                  }}
+                  open={Boolean(anchorElUser)}
+                  onClose={handleCloseUserMenu}
+                >
+                  {account.map((account) => (
+                    <MenuItem key={account} onClick={handleCloseUserMenu}>
+                      <Typography textAlign="center">{account}</Typography>
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </Box>
+            </Toolbar>
+          </Box>
         </Box>
       </AppBar>
       <Outlet />

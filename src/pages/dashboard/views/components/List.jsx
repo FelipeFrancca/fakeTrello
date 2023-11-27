@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Paper, CssBaseline } from "@mui/material";
+import { Box, Paper} from "@mui/material";
 import { makeStyles } from '@material-ui/core/styles';
 import Title from './Title';
 import Card from "./Card";
@@ -18,7 +18,6 @@ export default function List({ list }) {
   return (
     <Box>
       <Paper className={classes.root}>
-        <CssBaseline />
         <Title title={list.title} />
         {list.cards.map((card) => (
           <Card key={card.id} card={card} />
