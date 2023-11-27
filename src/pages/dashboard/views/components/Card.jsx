@@ -14,7 +14,7 @@ export default function Card({ card }) {
   return (
     <Box>
         <Paper className={classes.card}>
-            {card.content}
+            {card.title}
         </Paper>
     </Box>
   )

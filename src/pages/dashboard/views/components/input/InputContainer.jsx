@@ -18,13 +18,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ImputContainer() {
+export default function ImputContainer({ listId }) {
   const classes = useStyles();
   const [open,setOpen] = useState(false);
   return (
     <Box className={classes.root}>
       <Collapse in={open}>
-        <InputCard setOpen={setOpen} />
+        <InputCard setOpen={setOpen} listId={listId} />
       </Collapse>
       <Collapse in={!open}>
         <Paper className={classes.addCard} elevation={0} onClick={() => setOpen(!open)}>

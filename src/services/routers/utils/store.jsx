@@ -1,25 +1,28 @@
 const cards = [
     {
-        id: 'card-1',
-        content: 'Learning how to cook'
+      id: 'card-1',
+      title: 'Learning how to cook',
     },
     {
-        id: 'card-2',
-        content: 'Making sandwich'
+      id: 'card-2',
+      title: 'Making a sandwich',
     },
     {
-        id: 'card-3',
-        content: 'Taking the trash out'
+      id: 'card-3',
+      title: 'Taking the trash out',
     },
-];
-
-const data = {
-    'list-1': {
+  ];
+  
+  const data = {
+    lists: {
+      'list-1': {
         id: 'list-1',
-        title: 'To-Do',
+        title: 'Todo',
         cards,
+      },
     },
     listIds: ['list-1'],
-};
-
-export default data;
+  };
+  
+  export default data;
+  
