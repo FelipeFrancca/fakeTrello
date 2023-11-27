@@ -4,9 +4,21 @@ import { Box,} from "@mui/material";
 import List from "./components/List";
 import store from '../../../services/routers/utils/store'
 import StoreAPI from "../../../services/routers/utils/storeApi";
+import InputContainer from "./components/input/InputContainer";
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    marginTop: "5rem",
+  },
+}));
 
 export default function Home() {
 const [data, setData] = useState(store);
+
+const classes = useStyles();
+
 const addMoreCard = (title, listId) =>{
   const newCardId = uuid();
   const newCard = {
@@ -27,13 +39,15 @@ const addMoreCard = (title, listId) =>{
   };
   setData(newState);
 };
+
   return (
     <StoreAPI.Provider value={{ addMoreCard }}>
-    <Box>
+    <Box className={classes.root}>
       {data.listIds.map((listId) => {
         const list = data.lists[listId];
         return <List list={list} key={listId} />;
       })}
+      <InputContainer type="list" />
     </Box>
     </StoreAPI.Provider>
   );

@@ -8,7 +8,6 @@ import ImputContainer from "./input/InputContainer";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '300px',
-    marginTop: '6em',
     marginLeft: theme.spacing(2),
   },
 }));
@@ -22,7 +21,7 @@ export default function List({ list }) {
         {list.cards.map((card) => (
           <Card key={card.id} card={card} />
         ))}
-        <ImputContainer listId={list.id} />
+        <ImputContainer listId={list.id} type="card" />
       </Paper>
     </Box>
   );
