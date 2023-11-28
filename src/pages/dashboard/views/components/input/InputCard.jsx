@@ -34,15 +34,22 @@ const useStyles = makeStyles((theme) => ({
 
 export default function InputCard({ setOpen, listId, type }) {
   const classes = useStyles();
-  const { addMoreCard } = useContext(storeAPI);
+  const { addMoreCard, addMoreList } = useContext(storeAPI);
   const [title, setTitle] = useState("");
   const handleOnChange = (e) => {
     setTitle(e.target.value);
   };
   const handlebtnConfirm = () => {
-    addMoreCard(title, listId);
-    setTitle("");
-    setOpen(false);
+    if (type === 'card') {
+      addMoreCard(title, listId);
+      setTitle("");
+      setOpen(false);
+    }
+    else {
+      addMoreList(title)
+      setTitle("");
+      setOpen(false);
+    }
   };
 
   const handleBlur = () => {

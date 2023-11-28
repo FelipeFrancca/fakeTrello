@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
-import { Box,} from "@mui/material";
+import { Box } from "@mui/material";
 import List from "./components/List";
-import store from '../../../services/routers/utils/store'
+import store from "../../../services/routers/utils/store";
 import StoreAPI from "../../../services/routers/utils/storeApi";
 import InputContainer from "./components/input/InputContainer";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,40 +15,56 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Home() {
-const [data, setData] = useState(store);
+  const [data, setData] = useState(store);
 
-const classes = useStyles();
+  const classes = useStyles();
 
-const addMoreCard = (title, listId) =>{
-  const newCardId = uuid();
-  const newCard = {
-    id: newCardId,
-    title,
-  }
+  const addMoreCard = (title, listId) => {
+    const newCardId = uuid();
+    const newCard = {
+      id: newCardId,
+      title,
+    };
 
-  const list = data.lists[listId];
-  list.cards = [... list.cards,newCard];
+    const list = data.lists[listId];
+    list.cards = [...list.cards, newCard];
 
-  const newState = {
-      ... data,
+    const newState = {
+      ...data,
+      lists: {
+        ...data.lists,
+        [listId]: list,
+      },
+    };
+    setData(newState);
+  };
+
+  const addMoreList = (title) => {
+    const newListId = uuid();
+    const newList = {
+      id: newListId,
+      title,
+      cards: [],
+    };
+    const newState = {
+      listIds: [... data.listIds, newListId],
       lists: {
         ... data.lists,
-      [listId]: list,
-    },
-
+        [newListId]: newList,
+      },
+    };
+    setData(newState);
   };
-  setData(newState);
-};
 
   return (
-    <StoreAPI.Provider value={{ addMoreCard }}>
-    <Box className={classes.root}>
-      {data.listIds.map((listId) => {
-        const list = data.lists[listId];
-        return <List list={list} key={listId} />;
-      })}
-      <InputContainer type="list" />
-    </Box>
+    <StoreAPI.Provider value={{ addMoreCard, addMoreList }}>
+      <Box className={classes.root}>
+        {data.listIds.map((listId) => {
+          const list = data.lists[listId];
+          return <List list={list} key={listId} />;
+        })}
+        <InputContainer type="list" />
+      </Box>
     </StoreAPI.Provider>
   );
 }
