@@ -64,14 +64,12 @@ Mencione as ferramentas que você usou para criar seu projeto
 
 ## 📄 Licença
 
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/FelipeFrancca/fakeTrello/licence) para detalhes.
+Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/FelipeFrancca/fakeTrello/license.txt) para detalhes.
 
 ## 🎁 Expressões de gratidão
 
 * Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
+* Obrigado pelo interesse em meu trabalho, e espero que eu possa te inspirar a desenvolver algo grandioso! 🫂;
 
 
 ---
