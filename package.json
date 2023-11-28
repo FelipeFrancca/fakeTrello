@@ -1,6 +1,6 @@
 {
-  "name": "felipe-franca",
-  "version": "0.1.0",
+  "name": "Fake Trello",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
