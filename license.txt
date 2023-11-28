@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 [FelipeFrancca](https://gist.github.com/FelipeFrancca)
+Copyright (c) 2023 [FelipeFrancca](https://github.com/FelipeFrancca/)
 
 Permissão é concedida gratuitamente a qualquer pessoa que obtenha uma cópia deste software e arquivos de documentação associados, para lidar com o Software sem restrição, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do Software, e permitir que as pessoas a quem o Software é fornecido o façam, sob as seguintes condições:
 

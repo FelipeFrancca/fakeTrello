@@ -54,17 +54,17 @@ yarn start
 
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
+Ferramenta utilizada para criação do projeto:
 
 * [React.js](https://react.dev) - O framework web usado
 
-## ✒️ Autores
+## ✒️ Autor
 
-* **Felipe França** - *Desenvolvedor do projeto* - [FelipeFrancca](https://gist.github.com/FelipeFrancca)
+* **Felipe França** - *Desenvolvedor do projeto* - [FelipeFrancca](https://github.com/FelipeFrancca/)
 
 ## 📄 Licença
 
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/FelipeFrancca/fakeTrello/license.txt) para detalhes.
+Este projeto está sob a licença Copyright (c) 2023 [FelipeFrancca](https://github.com/FelipeFrancca/) - veja o arquivo [Licença](license.txt) para detalhes.
 
 ## 🎁 Expressões de gratidão
 
