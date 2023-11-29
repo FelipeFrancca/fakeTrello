@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     marginTop: "5rem",
+    overflow: "hidden",
   },
 }));
 
