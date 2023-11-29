@@ -47,17 +47,30 @@ export default function Home() {
       cards: [],
     };
     const newState = {
-      listIds: [... data.listIds, newListId],
+      listIds: [...data.listIds, newListId],
       lists: {
-        ... data.lists,
+        ...data.lists,
         [newListId]: newList,
       },
     };
     setData(newState);
   };
 
+  const updateListTitle = (title, listId) => {
+    const list = data.lists[listId];
+    list.title = title;
+
+    const newState = {
+      ...data,
+      list: {
+        ...data.lists,
+        [listId]: list,
+      },
+    };
+    setData(newState)
+  };
   return (
-    <StoreAPI.Provider value={{ addMoreCard, addMoreList }}>
+    <StoreAPI.Provider value={{ addMoreCard, addMoreList, updateListTitle }}>
       <Box className={classes.root}>
         {data.listIds.map((listId) => {
           const list = data.lists[listId];

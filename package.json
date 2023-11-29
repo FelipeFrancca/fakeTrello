@@ -1,5 +1,5 @@
 {
-  "name": "Fake Trello",
+  "name": "faketrello",
   "version": "1.0",
   "private": true,
   "dependencies": {

@@ -17,7 +17,7 @@ export default function List({ list }) {
   return (
     <Box>
       <Paper className={classes.root}>
-        <Title title={list.title} />
+        <Title title={list.title} listId={list.id} />
         {list.cards.map((card) => (
           <Card key={card.id} card={card} />
         ))}
