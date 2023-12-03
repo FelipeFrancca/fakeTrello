@@ -5,7 +5,6 @@ import {
   IconButton,
   InputBase,
   Paper,
-  alpha,
 } from "@material-ui/core";
 import ClearIcon from "@mui/icons-material/Clear";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,18 +12,22 @@ import storeAPI from "../../../../../services/routers/utils/storeApi";
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    margin: theme.spacing(0, 1, 1, 1),
+    border: "solid red",
+    minWidth: "280px",
+    margin: theme.spacing(1, 1, 1, 1),
     padding: theme.spacing(1),
     paddingBottom: theme.spacing(4),
+    backgroundColor: "#28242c !important",
   },
   input: {
     margin: theme.spacing(1),
+    color: "#b6c2cf",
   },
   btnConfirm: {
-    background: "#5AAC44",
-    color: "#fff",
+    background: "#5AAC44 !important",
+    color: "#fff !important",
     "&:hover": {
-      background: alpha("#5AAC44", 0.25),
+      background: "#57c638 !important",
     },
   },
   confirm: {
@@ -83,7 +86,10 @@ export default function InputCard({ setOpen, listId, type }) {
           {type === "card" ? "Add Card" : "Add list"}
         </Button>
         <IconButton onClick={handleBlur}>
-          <ClearIcon />
+          <ClearIcon
+          sx={{color: "#b6c2cf", padding: 1, borderRadius: 1, 
+          "&:hover":{backgroundColor: "#302c24 !important",}
+        }}/>
         </IconButton>
       </Box>
     </Box>

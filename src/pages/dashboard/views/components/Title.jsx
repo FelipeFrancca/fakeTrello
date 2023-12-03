@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     fontSize: "14px !important",
     fontWeight: "600 !important",
+    color: "#b6c2cf",
   },
   input: {
     margin: theme.spacing(1),
@@ -23,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(1),
       border: "solid #579DFF",
       borderRadius: "10px",
-      backgroundColor: "#ddd",
+      color: "#b6c2cf",
+      backgroundColor: "#302c24",
       fontSize: "14px !important",
       fontWeight: "600 !important",
     },
