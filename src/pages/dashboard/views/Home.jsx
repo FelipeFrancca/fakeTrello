@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import { Box } from "@mui/material";
-import List from "./components/List";
+import Lists from "./components/Lists";
 import store from "../../../services/routers/utils/store";
 import StoreAPI from "../../../services/routers/utils/storeApi";
 import InputContainer from "./components/input/InputContainer";
 import { makeStyles } from "@material-ui/core/styles";
-import { DragDropContext } from "react-beautiful-dnd";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -88,12 +88,19 @@ export default function Home() {
   };
 
   const onDragEnd = (result) => {
-    const { destination, source, draggableId } = result;
+    const { destination, source, draggableId, type } = result;
     console.log("destination", destination, "source", source, draggableId);
 
     if (!destination) {
       return;
     }
+    if (type === "list") {
+      const newListIds = data.listIds;
+      newListIds.splice(source.index, 1);
+      newListIds.splice(destination.index, 0, draggableId);
+      return;
+    }
+
     const sourceList = data.lists[source.droppableId];
     const destinationList = data.lists[destination.droppableId];
     const draggingCard = sourceList.cards.filter(
@@ -111,14 +118,16 @@ export default function Home() {
         },
       };
       setData(newState);
-    }else {
+    } else {
       sourceList.cards.splice(source.index, 1);
       destinationList.cards.splice(destination.index, 0, draggingCard);
+
       const newState = {
         ...data,
         lists: {
           ...data.lists,
-          [sourceList.id]: sourceList, [destinationList.id]: destinationList,
+          [sourceList.id]: sourceList,
+          [destinationList.id]: destinationList,
         },
       };
       setData(newState);
@@ -128,13 +137,22 @@ export default function Home() {
   return (
     <StoreAPI.Provider value={{ addMoreCard, addMoreList, updateListTitle }}>
       <DragDropContext onDragEnd={onDragEnd}>
-        <Box className={classes.root}>
-          {data.listIds.map((listId, index) => {
-            const list = data.lists[listId];
-            return <List list={list} key={listId} index={index} />;
-          })}
-          <InputContainer type="list" />
-        </Box>
+        <Droppable droppableId="Home" type="list" direction="horizontal">
+          {(provided) => (
+            <Box
+              className={classes.root}
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {data.listIds.map((listId, index) => {
+                const list = data.lists[listId];
+                return <Lists list={list} key={listId} index={index} />;
+              })}
+              <InputContainer type="list" />
+              {provided.placeholder}
+            </Box>
+          )}
+        </Droppable>
       </DragDropContext>
     </StoreAPI.Provider>
   );
