@@ -36,9 +36,9 @@ export default function BasicMenu() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}>Test 1</MenuItem>
+        <MenuItem onClick={handleClose}>Teste 2</MenuItem>
+        <MenuItem onClick={handleClose}>Teste 3</MenuItem>
       </Menu>
     </div>
   );

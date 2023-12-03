@@ -5,10 +5,24 @@ import Title from './Title';
 import Card from "./Card";
 import ImputContainer from "./input/InputContainer";
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '300px',
+    width: "300px",
     marginLeft: theme.spacing(2),
+    maxHeight: "99%",
+    overflowX: "hidden",
+    scrollbarGutter: "stable",
+    "&::-webkit-scrollbar": {
+      width: "10px",
+      height: "12px",
+      borderRadius: "50px",
+      backgroundColor: "#323232",
+    },
+    "&::-webkit-scrollbar-thumb": {
+      borderRadius: "50px",
+      backgroundColor: "#9FADBC",
+    },
   },
 }));
 

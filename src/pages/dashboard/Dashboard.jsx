@@ -21,6 +21,7 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { Outlet } from "react-router-dom";
 import Zoom from "@mui/material/Zoom";
 import SearchIcon from "@mui/icons-material/Search";
+import { Divider } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -67,13 +68,24 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const account = [
   "Switch accounts",
   "Manage accounts",
+];
+
+const fakeTrello = [
+  "Switch accounts",
+  "Manage accounts",
   "Profile and visibility",
   "Activity",
   "Cards",
   "Settings",
   "Theme",
+];
+
+const help = [
   "Help",
   "Shortcuts",
+];
+
+const logout = [
   "Log out",
 ];
 
@@ -133,7 +145,6 @@ function ResponsiveAppBar() {
               id="2"
               sx={{ display: "flex", alignItems: "center", marginRight: "16px" }}
             >
-              {/* Component with ID 2 */}
               <Search>
                 <SearchIconWrapper>
                   <SearchIcon />
@@ -160,7 +171,7 @@ function ResponsiveAppBar() {
                 </IconButton>
               </Tooltip>
               <Menu
-                sx={{ mt: "45px" }}
+                sx={{ mt: "45px", }}
                 id="menu-appbar"
                 anchorEl={anchorElUser}
                 anchorOrigin={{
@@ -176,11 +187,24 @@ function ResponsiveAppBar() {
                 onClose={handleCloseUserMenu}
               >
                 {account.map((account) => (
-                  <MenuItem key={account} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{account}</Typography>
+                  
+                  <MenuItem
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    color: "#8C9BAB",
+                    "&:hover":
+                    {
+                      backgroundColor: "#353c41",
+                    }
+                  }}
+                    onClick={handleCloseUserMenu}> 
+                    <Typography textAlign="center">
+                    {account}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
+              <Divider />
             </Box>
           </Box>
         </Toolbar>

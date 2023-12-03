@@ -11,7 +11,22 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     marginTop: "5rem",
-    overflow: "hidden",
+    height: "90vh",
+    maxWidth: "100vw",
+    overflowY: "auto",
+    scrollbarGutter: "stable",
+    "&::-webkit-scrollbar": {
+      width: "12px",
+      height: "10px",
+      borderRadius: "50px",
+      backgroundColor: "#323232",
+      marginRight: "50px"
+    },
+    "&::-webkit-scrollbar-thumb": {
+      borderRadius: "50px",
+      marginRight: "50px",
+      backgroundColor: "#9FADBC",
+    },
   },
 }));
 

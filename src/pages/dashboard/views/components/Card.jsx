@@ -6,6 +6,10 @@ const useStyles = makeStyles((theme) => ({
     card: {
       padding: theme.spacing(1),
       margin: theme.spacing(1),
+      cursor: "pointer",
+      "&:hover": {
+        border: "solid #579DFF",
+      }
     },
   }));
 

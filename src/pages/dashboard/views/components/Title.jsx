@@ -7,19 +7,25 @@ import storeApi from "../../../../services/routers/utils/storeApi";
 const useStyles = makeStyles((theme) => ({
   editableTitleContainer: {
     margin: theme.spacing(1),
+    padding: theme.spacing(1),
     display: "flex",
+    cursor: "pointer",
   },
   editableTitle: {
     flexGrow: 1,
-    fontSize: "1.2rem",
-    fontWeight: "bold",
+    fontSize: "14px !important",
+    fontWeight: "600 !important",
   },
   input: {
     margin: theme.spacing(1),
-    fontSize: "1.2rem",
-    fontWeight: "bold",
     "&:focus": {
+      margin: theme.spacing(1),
+      padding: theme.spacing(1),
+      border: "solid #579DFF",
+      borderRadius: "10px",
       backgroundColor: "#ddd",
+      fontSize: "14px !important",
+      fontWeight: "600 !important",
     },
   },
 }));
