@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function List({ list }) {
+export default function List({ list, index }) {
   const classes = useStyles();
   return (
     <Box>
