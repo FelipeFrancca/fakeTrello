@@ -6,7 +6,9 @@
 Projeto kanban desenvolvido em React.js para por em prática habilidades de "drag and drop" com layout baseado no site **[Trello](https://trello.com)**
 ---
 
-![Tela do projeto](image.png)
+![image](https://github.com/FelipeFrancca/fakeTrello/assets/115814883/a63c4f2a-6094-4394-95e8-a30499f0a150)
+
+
 ---
 
 ## 🚀 Conhecendo o projeto
