@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fakeTrello/static/css/main.fce85164.css",
-    "main.js": "/fakeTrello/static/js/main.64fdf591.js",
+    "main.js": "/fakeTrello/static/js/main.adc83e55.js",
     "static/js/453.510fc01d.chunk.js": "/fakeTrello/static/js/453.510fc01d.chunk.js",
     "static/media/roboto-latin-500-normal.woff2": "/fakeTrello/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/fakeTrello/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
@@ -61,11 +61,11 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/fakeTrello/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/fakeTrello/index.html",
     "main.fce85164.css.map": "/fakeTrello/static/css/main.fce85164.css.map",
-    "main.64fdf591.js.map": "/fakeTrello/static/js/main.64fdf591.js.map",
+    "main.adc83e55.js.map": "/fakeTrello/static/js/main.adc83e55.js.map",
     "453.510fc01d.chunk.js.map": "/fakeTrello/static/js/453.510fc01d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fce85164.css",
-    "static/js/main.64fdf591.js"
+    "static/js/main.adc83e55.js"
   ]
 }
