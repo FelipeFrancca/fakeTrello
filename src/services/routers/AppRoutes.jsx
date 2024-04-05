@@ -6,7 +6,7 @@ import NotFound from "../../pages/dashboard/views/components/NotFound.jsx";
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="" element={<Dashboard />}>
+      <Route path="/fakeTrello" element={<Dashboard />}>
         <Route path="" element={<Home />} />
       </Route>
       <Route path="*" element={<NotFound />} />
